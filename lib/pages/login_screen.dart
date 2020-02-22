@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String msg = '';
 
   Future<List> login() async {
-    final response = await http.post('http://192.168.1.5/api/login', body: {
+    final response = await http.post('http://192.168.1.11/api/login', body: {
       'email': controllerEmail.text,
       'password': controllerPass.text,
     });
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
     });
   } else {
     // if (datauser[0]['type']=='Admin') {
-      Navigator.pushReplacementNamed(context, '/adminPage');
+      Navigator.pushReplacementNamed(context, '/home');
     // } else if (datauser[0]['type']=='Assisstant') {
       // Navigator.pushReplacementNamed(context, '/staffPage');
     // }

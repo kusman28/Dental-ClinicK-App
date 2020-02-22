@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dental_clinick/screens/login_screen.dart';
-import 'package:dental_clinick/screens/adminPage.dart';
+import 'package:dental_clinick/pages/home.dart';
+import 'package:dental_clinick/pages/login_screen.dart';
+import 'package:dental_clinick/pages/adminPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       routes: <String, WidgetBuilder>{
+        '/home': (BuildContext context) => new Home(),
         '/login_screen': (BuildContext context) => new LoginScreen(),
         '/adminPage': (BuildContext context) => new Admin(),
       },
